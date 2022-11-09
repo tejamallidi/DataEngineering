@@ -55,9 +55,9 @@ iNeuroniNeuroniNeuroniNeuron
 Q17. Write a code to take a number as an input from the user and check if the number is odd or even.
 A. num=int(input('Enter a number'))
 if (num % 2) == 0:
-print('even')
+  print('even')
 else:
-print('odd')
+  print('odd')
 
 Q18. What are boolean operator?
 A. boolean operators or otherwise called as logical operators perform logical operations like and, or, not
@@ -74,7 +74,7 @@ True and False and True
 1 or 0 or 0
 ```
 
-Need more info for this question.
+A. Need more info for this question.
 
 Q20. What are conditional statements in Python?
 A. "if, elif, else" are conditional statements
@@ -85,9 +85,9 @@ A. To conditionally process the execution to meet a certain condition we use the
 Q22. Write a code to take the age of person as an input and if age >= 18 display "I can vote". If age is < 18 display "I can't vote".
 A. age=int(input('Enter your age'))
 if age >= 18:
-print('I can vote')
+  print('I can vote')
 elif age < 18:
-print("I can't vote")
+  print("I can't vote")
 Q23. Write a code that displays the sum of all the even numbers from the given list.
 
 ```
@@ -96,15 +96,15 @@ numbers = [12, 75, 150, 180, 145, 525, 50]
 
 sum = 0
 for num in numbers:
-if num%2 == 0:
-sum += num
+  if num%2 == 0:
+    sum += num
 print(sum)
 
 Q24. Write a code to take 3 numbers as an input from the user and display the greatest no as output.
 A. num1 = int(input('Enter number1 '))
-num2 = int(input('Enter number1 '))
-num3 = int(input('Enter number1 '))
-print(max(num1,num2,num3))
+  num2 = int(input('Enter number1 '))
+  num3 = int(input('Enter number1 '))
+  print(max(num1,num2,num3))
 
 Q25. Write a program to display only those numbers from a list that satisfy the following conditions
 
@@ -119,9 +119,9 @@ numbers = [12, 75, 150, 180, 145, 525, 50]
 ```
 
 A. for num in numbers:
-if num > 500:
-break
-elif num > 150:
-continue
-elif num % 5 == 0:
-print('Number divisible by 5 ', str(num))
+    if num > 500:
+      break
+    elif num > 150:
+      continue
+    elif num % 5 == 0:
+      print('Number divisible by 5 ', str(num))
