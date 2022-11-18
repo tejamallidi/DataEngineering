@@ -492,7 +492,15 @@ Q95. Write a Python program to sort a list of tuples by second item.
 Input : [('for', 24), ('Geeks', 8), ('Geeks', 30)] 
 Output : [('Geeks', 8), ('for', 24), ('Geeks', 30)]
 ```
-A.  
+A.  def sort_tuple(tup_list):
+        lst_length = len(tup_list)
+        for i in range(0, lst_length):     
+            for j in range(0, lst_length-i-1):
+                if (tup_list[j][1] > tup_list[j + 1][1]):
+                    temp = tup_list[j]
+                    tup_list[j]= tup_list[j + 1]
+                    tup_list[j + 1]= temp
+        return tup_list
 
 Q96. Write a python program to print below pattern.
 ```
@@ -502,6 +510,12 @@ Q96. Write a python program to print below pattern.
 * * * * 
 * * * * * 
 ```
+A.  def print_pattern(n):
+        for i in range(1,n+1):
+            for j in range(i):
+                print('* '*i)
+                break         
+
 Q97. Write a python program to print below pattern.
 ```
     *
@@ -510,6 +524,11 @@ Q97. Write a python program to print below pattern.
  ****
 *****
 ```
+A.  def print_pattern(n):
+        for i in range(1,n+1):
+            for j in range(i):
+                print(' '*(n-i)+'*'*i)
+                break
 
 Q98. Write a python program to print below pattern.
 ```
@@ -519,6 +538,12 @@ Q98. Write a python program to print below pattern.
  * * * * 
 * * * * * 
 ```
+A. def print_pattern(n):
+    for i in range(1,n+1):
+        for j in range(i):
+            print(' '*(n-i)+' *'*i)
+            break
+
 
 Q99. Write a python program to print below pattern.
 ```
@@ -528,6 +553,12 @@ Q99. Write a python program to print below pattern.
 1 2 3 4 
 1 2 3 4 5
 ```
+A.  def print_pattern(n):
+        for i in range(1,n+1):
+            for j in range(1,i+1):
+                print(j,end=" ")
+            print('')   
+
 
 Q100. Write a python program to print below pattern.
 ```
@@ -537,3 +568,11 @@ C C C
 D D D D 
 E E E E E 
 ```
+A.  def print_pattern(n):
+        ascii_number = 65
+        for i in range(1,n+1):
+            for j in range(1,i+1):
+                character = chr(ascii_number)
+                print(character, end=' ')
+            ascii_number+=1
+            print('')
