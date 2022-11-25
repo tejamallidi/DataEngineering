@@ -118,5 +118,7 @@ Q33. Which methods/functions do we use to determine the type of instance and inh
 A. super() is used to determine the inherited functions.
 
 Q34.Explain the use of the 'nonlocal' keyword in Python.
+A. nonlocal is used to change the varibale defined in outer fucntion. nonlocal will be used in the nested inner function.
 
 Q35. What is the global keyword?
+A. global keyword is used to change the value of a class level variable's value in a function. Usage should be done carefully. 
