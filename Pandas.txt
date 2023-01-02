@@ -1,24 +1,57 @@
 Q1. How do you load a CSV file into a Pandas DataFrame?
+A.  import pandas as pd
+    df = pd.read_csv('File path of CSV file')
 
 Q2. How do you check the data type of a column in a Pandas DataFrame?
+A.  df.dtypes
 
 Q3. How do you select rows from a Pandas DataFrame based on a condition?
+A.  df.head(10) - Gives the first 10 rows of the dataframe
+    df.tail(10) - Gives the last 10 rows of the dataframe
 
 Q4. How do you rename columns in a Pandas DataFrame?
+A.  df['new_col']
 
 Q5. How do you drop columns in a Pandas DataFrame?
+A.  df.drop('col_name',axis=1,inplace=True)
 
 Q6. How do you find the unique values in a column of a Pandas DataFrame?
+A.  df['col_name'].unique()
 
 Q7. How do you find the number of missing values in each column of a Pandas DataFrame?
+A.  df.isnull().sum()
 
 Q8. How do you fill missing values in a Pandas DataFrame with a specific value?
+A.  df.fillna(value_to_be_inserted)
 
 Q9. How do you concatenate two Pandas DataFrames?
+A.  frames = [df, df1] 
+    res1 = pd.concat(frames)
 
 Q10. How do you merge two Pandas DataFrames on a specific column?
+A.  # importing modules
+    import pandas as pd
+
+    # creating a dataframe
+    df1 = pd.DataFrame({'Name':['Raju', 'Rani', 'Geeta', 'Sita', 'Sohit'],
+              'Marks':[80, 90, 75, 88, 59]})
+
+    # creating another dataframe with different data
+    df2 = pd.DataFrame({'Name':['Raju', 'Divya', 'Geeta', 'Sita'],
+              'Grade':['A', 'A', 'B', 'A'],
+              'Rank':[3, 1, 4, 2 ],
+              'Gender':['Male', 'Female', 'Female', 'Female']})
+    # display df1
+    display(df1)
+
+    # display df2
+    display(df2)
+    
+     # applying merge
+     df1.merge(df2[['Name', 'Grade', 'Rank']])
 
 Q11. How do you group data in a Pandas DataFrame by a specific column and apply an aggregation function?
+A.  df.groupby(['col_name']).sum()
 
 Q12. How do you pivot a Pandas DataFrame?
 
